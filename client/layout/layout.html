@@ -1,0 +1,16 @@
+<template name="layout">
+  {{> navbar}}
+  <div>
+    <div class="row">
+      <div class="col m2 s12">
+        {{>yield 'categories'}}
+      </div>
+      <div class="col m7 s12">
+        {{>yield 'products'}}
+      </div>
+      <div class="col m3 s12">
+        {{>yield 'cart'}}
+      </div>
+    </div>
+  </div>
+</template>

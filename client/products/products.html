@@ -1,0 +1,39 @@
+<template name="products">
+  <div class="page-header">
+    <h1>
+      <span class="label-important label">{{Category}}</span> <small>Products</small>
+    </h1>
+  </div>
+  <ul class="collapsible" data-collapsible="accordion">
+
+  {{#each productlist}}
+  <li>
+
+
+    {{>product}}
+
+  </li>
+  {{/each}}
+
+  </ul>
+</template>
+
+
+
+<template name="product">
+
+  <div class="collapsible-header">
+    {{name}}
+  </div>
+  <div class="collapsible-body">
+  <div class="well span3">
+    <ul id="{{_id}}" class="nav nav-list">
+      <li><img class="thumbnail" src="http://placehold.it/100x100"></li>
+      <li><strong>{{name}}</strong></li>
+      <li>{{desc}}</li>
+      <li>{{currency price}}</li>
+    </ul>
+    <input class="validate prodqty" type="number"/><a class="btn addcart" href="#">Add</a>
+  </div>
+  </div>
+</template>
