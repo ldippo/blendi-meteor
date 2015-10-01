@@ -1,0 +1,9 @@
+<template name="custom">
+  <h1>Your custom smoothie</h1>
+  <ul>
+    {{#each ingredientlist}}
+    <li>{{price}}-{{name}}-{{qty}}<a class="chip removeingred" href="#">Remove</a></li>
+    {{/each}}
+  </ul>
+  Price: {{customprice.subtotal}}
+</template>

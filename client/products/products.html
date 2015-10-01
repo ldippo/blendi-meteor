@@ -32,6 +32,9 @@
       <li><strong>{{name}}</strong></li>
       <li>{{desc}}</li>
       <li>{{currency price}}</li>
+      {{#each ingredient}}
+      <li>{{ingredient}}</li>
+      {{/each}}
     </ul>
     <input class="validate prodqty" type="number"/><a class="btn addcart" href="#">Add</a>
   </div>

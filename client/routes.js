@@ -3,6 +3,9 @@ Router.route('/', function () {
 
   this.layout('layout');
 
+  this.render('ingredients', {to: "ingredients"});
+  this.render('custom', {to: "custom"});
+
   this.render('products',
   {
     to: "products",
@@ -24,6 +27,7 @@ Router.route('/:name', function(){
 
   this.layout('layout');
 
+  this.render('ingredients', {to: "ingredients"});
 
   this.render("cart", {to: "cart"});
 

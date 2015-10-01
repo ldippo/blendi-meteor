@@ -1,0 +1,19 @@
+<template name="ingredients">
+<h1>{{name}}</h1>
+<div>
+  <ul class="collection with-header">
+  {{#each Ingredients}}
+  <li class="collection-header">{{name}}</li>
+  {{#each Bases}}
+  <li class="collection-item">{{price}}{{name}}<input class="ingredqty" type="number" value="1"/><a class="btn addcustom" href="#">Add</a></li>
+  {{/each}}
+  {{#each Boosters}}
+  <li class="collection-item">{{price}}{{name}}<input class="ingredqty" type="number" value="1"/><a class="btn addcustom" href="#">Add</a></li>
+  {{/each}}
+  {{#each Produce}}
+  <li class="collection-item">{{price}}{{name}}<input class="ingredqty" type="number" value="1"/><a class="btn addcustom" href="#">Add</a></li>
+  {{/each}}
+  {{/each}}
+  </ul>
+</div>
+</template>
