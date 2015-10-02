@@ -4,12 +4,12 @@
       <small>Categories</small>
     </h1>
   </div>
-  
+
   <ul class="collection with-header">
     {{#each Categories}}
     <li class="collection-header">{{name}}</li>
     {{#each SubCategories}}
-    <li class="collection-item"><a href="{{name}}">{{name}}</a></li>
+    <li class="collection-item"><a href="items/{{name}}">{{name}}</a></li>
     {{/each}}
     {{/each}}
   </ul>

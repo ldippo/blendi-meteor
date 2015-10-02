@@ -22,3 +22,11 @@ iron:router
 ejson
 fourseven:scss
 materialize:materialize@=0.97.0
+accounts-ui
+accounts-facebook
+accounts-password
+coffeescript
+check
+dburles:mongo-collection-instances
+tmeasday:paginated-subscription
+houston:admin
