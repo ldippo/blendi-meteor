@@ -1,3 +1,5 @@
+Meteor.subscribe('ingredientData');
+
 Template.ingredients.helpers({
   Ingredients: function(){
     return Ingredients.find();

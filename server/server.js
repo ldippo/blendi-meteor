@@ -1,3 +1,21 @@
+Meteor.publish("userData", function () {
+  if (this.userId) {
+    return Meteor.users.find({_id: this.userId},
+                             {fields: {CustomIngredients : []}});
+  } else {
+    this.ready();
+  }
+});
+Meteor.publish("ingredientData", function () {
+  return Ingredients.find();
+});
+
+Meteor.publish("customsmoothies", function () {
+  return CustomIngredients.find({$or: [{"public": true},
+                             {owner: this.userId}]});
+});
+
+
 Meteor.startup(function(){
   if(Products.find().count() === 0){
     Products.insert({thumb: "http://lorempixel.com/100/100", name: "Apple Blast", price: 2.50, desc: "Awesome Apple Pie", catName: "Fruity", ingredients: ["Creatine", "Apples", "Bannanas"]});
@@ -18,8 +36,8 @@ Meteor.startup(function(){
     var prid = Ingredients.insert({name: 'PRODUCE'});
     Bases.insert({name: 'Milk', price: 0.20, cat:baid});
     Produce.insert({name: 'Fruit', price: 0.25, cat:prid});
-    Boosters.insert({name: 'Caffeine', price: 0.3, cat:boid});
-    CustomIngredients.insert({name: "Ingredient", price: 0, qty: 3});
+    Boosters.insert({name: 'Caffeine', price: 0.3, cat:eorboid});
+    CustomIngredients.insert({name: "Ingredient", price: 0, qty: 3, owner: this.userId});
   }
 });
 Meteor.methods({

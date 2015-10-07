@@ -1,4 +1,4 @@
-
+Meteor.subscribe("customsmoothies");
 Template.custom.helpers ({
   ingredientlist: function(){
     return CustomIngredients.find();
