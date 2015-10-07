@@ -9,6 +9,15 @@ Meteor.publish("userData", function () {
 Meteor.publish("ingredientData", function () {
   return Ingredients.find();
 });
+Meteor.publish("boosterData", function () {
+  return Boosters.find();
+});
+Meteor.publish("baseData", function () {
+  return Bases.find();
+});
+Meteor.publish("produceData", function () {
+  return Produce.find();
+});
 
 Meteor.publish("customsmoothies", function () {
   return CustomIngredients.find({$or: [{"public": true},
